@@ -1,0 +1,25 @@
+﻿<Application x:Class="SplitMenuSample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SplitMenuSample"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--	we only bring in the dictionaries for controls which were "invented"
+				as part of Material Design in XAML Toolkit. Other themes, for existing controls
+				must be selected manually by the user, so that they override default styles.
+				The easiest way to do this is include:
+
+					MaterialDesignTheme.Defaults.xaml
+				in your App.xaml
+		-->
+                <ResourceDictionary Source="pack://application:,,,/SplitMenu;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/SplitMenu;component/Themes/HamburgerButton.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
